@@ -1,0 +1,285 @@
+*{
+
+padding: 0%;
+margin: 0%;
+
+}
+
+$colLetra:white ;
+$colFondo:rgb(38, 39, 34);
+$colBorde:rgb(255, 187, 0);
+$ancho:100%;
+$alto:500px;
+
+.navbar{
+
+    border: 2px solid $colBorde;
+    
+}
+
+.boxHome1{
+
+    background-color:$colFondo;
+    padding-top: 5px;
+
+}
+
+.boxHome1 img{
+
+    width: $ancho;
+    object-fit: contain;
+    
+    border: 2px solid $colBorde;
+    border-radius: 10px;
+
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+
+}
+
+.boxHome1 img:hover{
+
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+
+}
+
+h2{
+
+    color: $colLetra;
+    text-align: center;
+    font-size: 35px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 5px;
+}
+
+h3{
+    color: $colLetra;
+    text-align: center;
+    font-size: 25px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-top: 5px;
+}
+
+p{
+    color: $colLetra;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+.boxHome2{
+
+background-color: $colFondo;
+padding-top: 5px;
+}
+
+.boxHome3{
+
+    width: $ancho;
+    background-color: $colFondo;
+    padding-top: 5px;
+}
+
+.boxHome3 img{
+
+    width: $ancho;
+    height: 500px;
+    border: 2px solid $colBorde;
+    object-fit: cover;
+
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+.boxHome3 img:hover{
+
+    -webkit-transform: perspective(150px) rotateX(5deg);
+    transform: perspective(150px) rotateX(5deg);
+
+}
+
+.boxHome4{
+
+    @extend .boxHome3;
+}
+
+.boxHome4.img{
+
+    width: $ancho;
+    height: 500px;
+    border: 2px solid $colBorde;
+    object-fit: cover;
+
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+
+}
+
+.boxHome4.img:hover{
+
+    -webkit-transform: perspective(150px) rotateX(5deg);
+    transform: perspective(150px) rotateX(5deg);
+}
+
+
+
+.boxHome5{
+
+    @extend .boxHome3;
+
+}
+
+.boxHome5.img{
+
+    width: $ancho;
+    height: 500px;
+    border: 2px solid $colBorde;
+    object-fit: cover;
+
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+
+}
+
+.boxHome5.img:hover{
+    -webkit-transform: perspective(150px) rotateX(5deg);
+    transform: perspective(150px) rotateX(5deg);
+}
+
+// -----------------------------------------autos---------------------------------------
+
+body{
+
+    background-color: $colFondo;
+}
+$autos: (
+
+    50%: black,
+    75%: red,
+    100%: green
+);
+
+
+@each $anchoAuto, $bordeColor in $autos {
+    .boxAutos-#{ $bordeColor} {
+
+        margin-top: 10px;
+        margin-bottom: 10px;
+        background-color: $colFondo;
+        
+        height: 1020px;
+        width: $anchoAuto;
+        border: 2px solid $bordeColor;
+
+        padding-top: 10px;
+        padding-bottom: 10px;
+
+    } 
+}
+
+.boxAutos-black img{
+
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border:2px solid $colBorde;
+    border-radius: 10px;
+}
+
+.boxAutos-red img{
+
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border:2px solid $colBorde;
+    border-radius: 10px;
+}
+
+.boxAutos-green img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border:2px solid $colBorde;
+    border-radius: 10px;
+}
+
+// ------------------------------------------------------nosotros--------------------------------------------------------------
+
+@mixin caja ($alto,$ancho,$color){
+
+    height:$alto;
+    width:$ancho;
+    background-color:$color;
+}
+
+.boxNos{
+
+    overflow: auto;
+    @include caja( 800px,100%,$colFondo);
+    border:2px solid $colBorde;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+}
+
+iframe{
+
+    width: 100%;
+    height: 350px;
+    object-position: center;
+
+}
+
+.boxNos:hover{
+
+    -webkit-transform: scale(.9);
+  transform: scale(.9);
+}
+
+// -----------------------------------------------------footer------------------------
+
+.logos {
+
+    
+    color: rgb(0, 172, 252);
+    font-size: 60px;
+    -webkit-transition: 1s linear;
+    transition: 1s linear;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.redes {
+
+    text-align: center;
+
+}
+
+.logos:hover {
+
+    color: rgba(25, 25, 221, 0.863);
+    -webkit-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+}
+
+.menuNav{
+
+}
+
+.menuNav a{
+
+    text-decoration:solid;
+    font-size: 35px;
+    text-align: center;
+    color: rgb(0, 172, 252);
+    margin-left: 50px;
+    margin-right: 50px;
+
+}
